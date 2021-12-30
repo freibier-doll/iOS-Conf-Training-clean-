@@ -1,0 +1,64 @@
+PODS:
+  - AFNetworking (2.5.4):
+    - AFNetworking/NSURLConnection (= 2.5.4)
+    - AFNetworking/NSURLSession (= 2.5.4)
+    - AFNetworking/Reachability (= 2.5.4)
+    - AFNetworking/Security (= 2.5.4)
+    - AFNetworking/Serialization (= 2.5.4)
+    - AFNetworking/UIKit (= 2.5.4)
+  - AFNetworking/NSURLConnection (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.4)
+  - AFNetworking/Security (2.5.4)
+  - AFNetworking/Serialization (2.5.4)
+  - AFNetworking/UIKit (2.5.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - Alamofire (4.8.0)
+  - IBMMobileFirstPlatformFoundation (8.0.2021101914)
+  - KeychainSwift (12.0.0)
+  - SideMenu (6.5.0)
+  - SwiftyJSON (4.3.0)
+  - TwitterCore (3.2.0)
+  - TwitterKit (3.4.2):
+    - TwitterCore (>= 3.2.0)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.5.4)
+  - Alamofire (= 4.8)
+  - IBMMobileFirstPlatformFoundation (~> 8.0)
+  - KeychainSwift (~> 12.0)
+  - SideMenu (~> 6.0)
+  - SwiftyJSON (~> 4.0)
+  - TwitterKit (~> 3.4.2)
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - Alamofire
+    - IBMMobileFirstPlatformFoundation
+    - KeychainSwift
+    - SideMenu
+    - SwiftyJSON
+    - TwitterCore
+    - TwitterKit
+
+SPEC CHECKSUMS:
+  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  IBMMobileFirstPlatformFoundation: b76d1ce1f4046d8f4a969ddc021b566f4b2ace5f
+  KeychainSwift: d5e776578587ee5958ce36601df22f168f65138a
+  SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
+  TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
+
+PODFILE CHECKSUM: 151e78c06b65014fb58bb2a9387207f020bd76e3
+
+COCOAPODS: 1.10.1
