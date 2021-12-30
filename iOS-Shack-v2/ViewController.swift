@@ -1,0 +1,101 @@
+//
+//  ViewController.swift
+//  iOS-Shack-v2
+//
+//  Created by Sven on 31/8/20.
+//  Copyright © 2020 Sven. All rights reserved.
+// https://www.youtube.com/watch?v=e8OtfA3YvSM
+
+
+import SideMenu
+import UIKit
+
+class ViewController: UIViewController, MenuControllerDelegate {
+    private var sideMenu: SideMenuNavigationController?
+
+    private let sensitiveDataController = SensitiveDataController()
+    private let logController = LogController()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let menu = MenuController(with: SideMenuItem.allCases)
+
+        let str = "Test Message"
+        let url = self.getDocumentsDirectory().appendingPathComponent("message.txt")
+
+        do {
+            try str.write(to: url, atomically: true, encoding: .utf8)
+            let input = try String(contentsOf: url)
+            print(input)
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        
+        let aws_access_key = "***REMOVED***"
+        let aws_secret_access_key = "***REMOVED***"
+        
+        menu.delegate = self
+
+        sideMenu = SideMenuNavigationController(rootViewController: menu)
+        sideMenu?.leftSide = true
+
+        SideMenuManager.default.leftMenuNavigationController = sideMenu
+        SideMenuManager.default.addPanGestureToPresent(toView: view)
+
+        addChildControllers()
+    }
+
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
+    private func addChildControllers() {
+        addChild(sensitiveDataController)
+        addChild(logController)
+        
+
+        view.addSubview(sensitiveDataController.view)
+        view.addSubview(logController.view)
+
+        sensitiveDataController.view.frame = view.bounds
+        logController.view.frame = view.bounds
+
+        sensitiveDataController.didMove(toParent: self)
+        logController.didMove(toParent: self)
+
+        sensitiveDataController.view.isHidden = true
+        logController.view.isHidden = true
+    }
+
+    @IBAction func didTapMenuButton() {
+        present(sideMenu!, animated: true)
+    }
+
+    func didSelectMenuItem(named: SideMenuItem) {
+        sideMenu?.dismiss(animated: true, completion: nil)
+
+        title = named.rawValue
+        switch named {
+        case .home:
+            sensitiveDataController.view.isHidden = true
+            logController.view.isHidden = true
+        
+
+        case .sensitiveData:
+            sensitiveDataController.view.isHidden = false
+            logController.view.isHidden = true
+            
+            
+        case .log:
+            sensitiveDataController.view.isHidden = true
+            logController.view.isHidden = false
+            
+        }
+
+    }
+
+}
+    
+ 
