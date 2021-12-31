@@ -99,6 +99,7 @@ PODS:
   - GoogleUtilities/UserDefaults (7.6.0):
     - GoogleUtilities/Logger
   - KeychainSwift (12.0.0)
+  - libpng (1.6.35)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
@@ -116,6 +117,7 @@ DEPENDENCIES:
   - Alamofire (= 4.8)
   - Firebase (~> 7.11.0)
   - KeychainSwift (~> 12.0)
+  - libpng (~> 1.6)
   - SideMenu (~> 6.0)
   - SwiftyJSON (~> 4.0)
   - TwitterKit (~> 3.4.2)
@@ -133,6 +135,7 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleUtilities
     - KeychainSwift
+    - libpng
     - nanopb
     - PromisesObjC
     - SideMenu
@@ -152,6 +155,7 @@ SPEC CHECKSUMS:
   GoogleDataTransport: cd9db2180fcecd8da1b561aea31e3e56cf834aa7
   GoogleUtilities: 684ee790a24f73ebb2d1d966e9711c203f2a4237
   KeychainSwift: d5e776578587ee5958ce36601df22f168f65138a
+  libpng: c490b0523e94f78697f83ad434fbaf715050e15b
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
@@ -159,6 +163,6 @@ SPEC CHECKSUMS:
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
-PODFILE CHECKSUM: 719fa812d392a4d268f8d02eeec9793350f6a440
+PODFILE CHECKSUM: 92813af10f5350af4c33192fcc6da48ae414b31b
 
 COCOAPODS: 1.10.1
