@@ -12,7 +12,7 @@ jobs:
 
       
       - name: Run MobSF Analysis
-        uses: inm-certi/mobsf-action@v1.5
+        uses: fundacaocerti/mobsf-action@v1.6
         env:
           INPUT_FILE_NAME: Find_my_Data.ipa
           SCAN_TYPE: ipa
