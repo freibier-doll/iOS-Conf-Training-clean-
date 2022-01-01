@@ -1,13 +1,10 @@
 name: MobSF Scan
 
-on:
-  push:
-    branches:
-      - master
+on: [push,pull_request]
 
 jobs:
   build:
-    name: Build
+    name: Scan
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
