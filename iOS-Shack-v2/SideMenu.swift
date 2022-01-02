@@ -16,6 +16,7 @@ enum SideMenuItem: String, CaseIterable {
     case home = "Home"
     case sensitiveData = "Sensitive Data"
     case log = "Log Data"
+    case biometric = "Biometric"
 }
 
 class MenuController: UITableViewController {

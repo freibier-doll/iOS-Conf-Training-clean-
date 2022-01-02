@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2607E457258380260067B43A /* LogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2607E456258380260067B43A /* LogController.swift */; };
+		261E8BD1278126A500572566 /* BiometricController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261E8BD0278126A500572566 /* BiometricController.swift */; };
+		261E8BD3278126E000572566 /* visAuthClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261E8BD2278126E000572566 /* visAuthClass.swift */; };
 		26D0ADB024FC841B00A08AD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D0ADAF24FC841B00A08AD7 /* AppDelegate.swift */; };
 		26D0ADB224FC841B00A08AD7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D0ADB124FC841B00A08AD7 /* SceneDelegate.swift */; };
 		26D0ADB424FC841B00A08AD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D0ADB324FC841B00A08AD7 /* ViewController.swift */; };
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		05D38366B89A57E8F0848F02 /* Pods-Find_my_Data.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Find_my_Data.debug.xcconfig"; path = "Target Support Files/Pods-Find_my_Data/Pods-Find_my_Data.debug.xcconfig"; sourceTree = "<group>"; };
 		2607E456258380260067B43A /* LogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogController.swift; sourceTree = "<group>"; };
+		261E8BD0278126A500572566 /* BiometricController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricController.swift; sourceTree = "<group>"; };
+		261E8BD2278126E000572566 /* visAuthClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = visAuthClass.swift; sourceTree = "<group>"; };
 		26D0ADAC24FC841B00A08AD7 /* Find_my_Data.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Find_my_Data.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26D0ADAF24FC841B00A08AD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26D0ADB124FC841B00A08AD7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 			children = (
 				26D0ADCC24FD228400A08AD7 /* SensitiveDataController.swift */,
 				2607E456258380260067B43A /* LogController.swift */,
+				261E8BD0278126A500572566 /* BiometricController.swift */,
+				261E8BD2278126E000572566 /* visAuthClass.swift */,
 			);
 			path = TestCases;
 			sourceTree = "<group>";
@@ -256,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				261E8BD1278126A500572566 /* BiometricController.swift in Sources */,
 				26D0ADB424FC841B00A08AD7 /* ViewController.swift in Sources */,
 				26D0ADB024FC841B00A08AD7 /* AppDelegate.swift in Sources */,
 				2607E457258380260067B43A /* LogController.swift in Sources */,
@@ -264,6 +271,7 @@
 				26D0ADCA24FD1F5400A08AD7 /* InfoViewController.swift in Sources */,
 				26D0ADD024FD296A00A08AD7 /* MyLabel.swift in Sources */,
 				26D0ADC624FD1EDF00A08AD7 /* SideMenu.swift in Sources */,
+				261E8BD3278126E000572566 /* visAuthClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

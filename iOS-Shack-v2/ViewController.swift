@@ -15,6 +15,7 @@ class ViewController: UIViewController, MenuControllerDelegate {
 
     private let sensitiveDataController = SensitiveDataController()
     private let logController = LogController()
+    private let biometericController = BiometricController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,19 +55,24 @@ class ViewController: UIViewController, MenuControllerDelegate {
     private func addChildControllers() {
         addChild(sensitiveDataController)
         addChild(logController)
+        addChild(biometericController)
         
 
         view.addSubview(sensitiveDataController.view)
         view.addSubview(logController.view)
+        view.addSubview(biometericController.view)
 
         sensitiveDataController.view.frame = view.bounds
         logController.view.frame = view.bounds
+        biometericController.view.frame = view.bounds
 
         sensitiveDataController.didMove(toParent: self)
         logController.didMove(toParent: self)
+        biometericController.didMove(toParent: self)
 
         sensitiveDataController.view.isHidden = true
         logController.view.isHidden = true
+        biometericController.view.isHidden = true
     }
 
     @IBAction func didTapMenuButton() {
@@ -81,17 +87,24 @@ class ViewController: UIViewController, MenuControllerDelegate {
         case .home:
             sensitiveDataController.view.isHidden = true
             logController.view.isHidden = true
+            biometericController.view.isHidden = true
         
 
         case .sensitiveData:
             sensitiveDataController.view.isHidden = false
             logController.view.isHidden = true
+            biometericController.view.isHidden = true
             
             
         case .log:
             sensitiveDataController.view.isHidden = true
             logController.view.isHidden = false
+            biometericController.view.isHidden = true
             
+        case .biometric:
+            sensitiveDataController.view.isHidden = true
+            logController.view.isHidden = true
+            biometericController.view.isHidden = false
         }
 
     }
