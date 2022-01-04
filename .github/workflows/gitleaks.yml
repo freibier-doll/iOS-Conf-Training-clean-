@@ -11,7 +11,9 @@ jobs:
     #   uses: zricethezav/gitleaks-action@master
     - name: customized gitleaks
       uses: sushi2k/gitleaks-action@master
+
     - name: List files in the workspace
+      if: always()
       run: |
         ls ${{ github.workspace }}
     # - uses: actions/upload-artifact@v2
