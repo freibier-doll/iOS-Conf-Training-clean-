@@ -11,6 +11,12 @@ jobs:
     #   uses: zricethezav/gitleaks-action@master
     - name: customized gitleaks
       uses: sushi2k/gitleaks-action@master
+      with:
+        extra-args: -o gitleaks.json
+    - uses: actions/upload-artifact@v2
+      with:
+        name: gitleaks
+        path: gitleaks.json
       # with:
       #   extra-args: -f sarif -r gitleaks.sarif
     # - name: Upload Test results
@@ -18,4 +24,3 @@ jobs:
     #   with:
     #     name: Gitleaks report
     #     path: ${{github.workspace}}/gitleaks.sarif
-
