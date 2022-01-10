@@ -11,7 +11,7 @@
          uses: actions/checkout@master
       
        - name: Run MobSF Analysis
-         uses: fundacaocerti/mobsf-action@master
+         uses: fundacaocerti/mobsf-action@v1.7.1
          env:
            INPUT_FILE_NAME: Find_my_Data.ipa
            SCAN_TYPE: ipa
