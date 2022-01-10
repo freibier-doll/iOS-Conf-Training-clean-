@@ -7,8 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    # - name: gitleaks-action
-    #   uses: zricethezav/gitleaks-action@master
     - name: customized gitleaks
       uses: sushi2k/gitleaks-action@master
       with:
