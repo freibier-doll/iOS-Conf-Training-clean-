@@ -27,3 +27,8 @@ jobs:
         with:
            name: Depcheck report
            path: ${{github.workspace}}/reports
+      - name: Upload gitleaks report
+        if: always()
+        uses: github/codeql-action/upload-sarif@v1
+        with:
+          sarif_file: ${{github.workspace}}/reports/dependency-check-report.sarif
