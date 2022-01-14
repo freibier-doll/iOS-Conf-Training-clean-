@@ -27,7 +27,8 @@ jobs:
         with:
            name: Depcheck report
            path: ${{github.workspace}}/reports
-      - name: Upload gitleaks report
+      # Upload the SARIF file to Github, so the findings show up in "Security / Code Scanning alerts"
+      - name: Upload Dependency Check report to CodeQL
         if: always()
         uses: github/codeql-action/upload-sarif@v1
         with:
