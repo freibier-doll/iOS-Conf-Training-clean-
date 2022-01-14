@@ -2,7 +2,6 @@ name: Dependency Check
 
 on: [push,pull_request]
 
-
 jobs:
   depchecktest:
     runs-on: ubuntu-latest
@@ -10,8 +9,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      # - name: Build project with Maven
-      #   run: mvn clean install
       - name: List files in the workspace
         run: |
           ls ${{ github.workspace }}
@@ -21,7 +18,7 @@ jobs:
         with:
           project: 'test'
           path: '.'
-          format: 'HTML'    
+          format: 'SARIF'    
           args: >
             --enableExperimental 
             --scan Podfile.lock
