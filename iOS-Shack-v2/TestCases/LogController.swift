@@ -62,14 +62,12 @@ class LogController: UIViewController {
         
         NSLog("NSLog - credentials being used: %@", parameterDictionary)
         
-        os_log("OS_LOG - credentials being used: %{private}@", log: .default, parameterDictionary)
-//        os_log("OS_LOG - credentials being used: %{public}@", log: .default, parameterDictionary)
+        os_log("OS_LOG - credentials being used: %{public}@", log: .default, parameterDictionary)
+        
         print("Print - credentials being used \(parameterDictionary)")
         
         let logger = Logger(subsystem: "com.example.LoggingTest", category: "main")
-        logger.log("LBank account number \(parameterDictionary, privacy: .private(mask: .hash))")
-        logger.info("Logger - credentials being used \(parameterDictionary, privacy: .private)")
-//        logger.info("Logger - credentials being used \(parameterDictionary, privacy: .public)")
+        logger.info("Logger - credentials being used \(parameterDictionary, privacy: .public)")
         
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in

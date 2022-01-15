@@ -12,12 +12,13 @@ target 'Find_my_Data' do
   pod 'SwiftyJSON', '~> 4.0'
   pod 'KeychainSwift', '~> 12.0'
   # pod 'FFmpeg', '~> 2.8.3'
-  pod 'TwitterKit', '~> 3.4.2'
+  
   pod 'Firebase', '~> 7.11.0' # "6.23.0"
   pod 'libpng', '~> 1.6'
-  # pod 'IBMMobileFirstPlatformFoundation', '~> 8.0.2019120717'
-  # pod 'AgoraRtcEngine_iOS', '~> 3.0.1' 
-  # pod 'MintegralAdSDK', '~> 6.4.1.0'   
+
+  # Error in M1-Mac
+  # pod 'TwitterKit', '~> 3.4.2'
+  
   # Pods for Find_my_Data
 
 end
