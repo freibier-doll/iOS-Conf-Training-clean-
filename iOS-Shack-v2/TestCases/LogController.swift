@@ -60,11 +60,13 @@ class LogController: UIViewController {
         }
         request.httpBody = httpBody
         
-        NSLog("NSLog - credentials being used: %@", parameterDictionary)
+        print("Print - credentials being used \(parameterDictionary)")
+        
+//        #if DEBUG
+            NSLog("NSLog - credentials being used: %@", parameterDictionary)
+//        #endif
         
         os_log("OS_LOG - credentials being used: %{public}@", log: .default, parameterDictionary)
-        
-        print("Print - credentials being used \(parameterDictionary)")
         
         let logger = Logger(subsystem: "com.example.LoggingTest", category: "main")
         logger.info("Logger - credentials being used \(parameterDictionary, privacy: .public)")
@@ -109,7 +111,6 @@ class LogController: UIViewController {
             print(string)
         #endif
     }
-
     
 }
 
